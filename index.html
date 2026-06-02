@@ -150,12 +150,10 @@
         const navMenu = document.getElementById('nav-menu');
         const scrollLinks = document.querySelectorAll('.scroll-link');
 
-        // Toggle menu open/close
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('active');
         });
 
-        // Close mobile menu automatically when ABOUT or FEEDBACK is clicked
         scrollLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('active');
