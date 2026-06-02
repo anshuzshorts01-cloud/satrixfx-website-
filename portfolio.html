@@ -3,207 +3,250 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Our Portfolio - SATRIXFX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
         body {
             background-color: #000000;
             color: #ffffff;
-            padding: 40px 20px;
+            font-family: 'Poppins', sans-serif;
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
             font-size: 2.5rem;
-            color: #ff0000;
-            text-transform: uppercase;
             letter-spacing: 2px;
-            border-bottom: 2px solid #ff0000;
-            padding-bottom: 10px;
-            display: inline-block;
-            left: 50%;
-            transform: translateX(-50%);
-            position: relative;
+            text-align: center;
+            margin: 50px 0 20px 0;
+            color: #fff;
+            text-transform: uppercase;
         }
-
+        .section-title span {
+            color: #ff3333;
+        }
+        
+        /* वीडियो ग्रिड स्टाइल */
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
-            margin-top: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        .portfolio-item {
-            background-color: #111111;
-            border: 1px solid #222222;
+        .portfolio-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
             border-radius: 8px;
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
-        .portfolio-item:hover {
+        .portfolio-card:hover {
+            border-color: #ff3333;
             transform: translateY(-5px);
-            border-color: #ff0000;
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.2);
         }
-
-        .media-container {
+        .video-container video {
             width: 100%;
-            height: 220px;
-            overflow: hidden;
-            background-color: #000;
-            border-bottom: 2px solid #ff0000;
-        }
-
-        .media-container img {
-            width: 100%;
-            height: 100%;
+            height: auto;
+            max-height: 400px;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            display: block;
+        }
+        .portfolio-info {
+            padding: 15px;
+            border-top: 1px solid #111;
+        }
+        .portfolio-info h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .portfolio-info p {
+            font-size: 0.85rem;
+            color: #888;
         }
 
-        .portfolio-item:hover .media-container img {
-            transform: scale(1.05);
-        }
-
-        .content {
+        /* इमेज गैलरी ग्रिड स्टाइल */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
-
-        .content h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-            color: #ffffff;
+        .gallery-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.3s ease;
         }
-
-        .content p {
-            color: #aaaaaa;
-            font-size: 0.9rem;
-            line-height: 1.5;
+        .gallery-card:hover {
+            border-color: #ff3333;
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 51, 51, 0.25);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>MY PORTFOLIO</h1>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color:inherit; text-decoration:none;">SATRIX<span>★</span>FX</a>
+            <div style="margin-top: 5px;"><a href="index.html" style="color: #888; text-decoration: none; font-size: 0.75rem; font-family: 'Poppins', sans-serif; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-arrow-left" style="color: #ff3333; margin-right: 4px;"></i> BACK TO HOME</a></div>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="photo.html">PHOTO</a>
+            <a href="video.html">VIDEO</a>
+            <a href="instagram.html">INSTAGRAM</a>
+            <a href="portfolio.html" style="color: #ff3333;">PORTFOLIO</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
+
+    <main class="home-section-scroll" style="padding-top: 140px; padding-bottom: 60px;">
+        <div style="text-align: center; margin-bottom: 30px;">
+            <div class="brand-badge">OUR CREATIONS</div>
+            <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 2px;">WORK PORTFOLIO</h1>
+            <p style="color: #888; max-width: 600px; margin: 15px auto 0 auto; font-size: 0.95rem;">
+                We don’t just edit — we craft memorable high-retention experiences and premium visual artworks.
+            </p>
+        </div>
+
+        <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 20px auto; max-width: 60%;" />
+
+        <h2 class="section-title">FEATURED <span>VIDEO EDITS</span></h2>
         
         <div class="portfolio-grid">
-
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="d4b8f9a965ada05816219f382658885b.jpg" alt="Project 1">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032305.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 1</h3>
-                    <p>यह आपकी पहली इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>CREATIVE REEL EDIT</h3><p>Advanced pacing, dynamic pop-ups, and audio integration.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="14e1b04d2f6a3bd6d409f85a1ad08164.jpg" alt="Project 2">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032300.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 2</h3>
-                    <p>यह आपकी दूसरी इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>BIRTHDAY CONCEPT FX</h3><p>Custom frames, grid animations, and beat matching.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="29a779733b2062887d629846a7a108c5.jpg" alt="Project 3">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032294.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 3</h3>
-                    <p>यह आपकी तीसरी इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>CINEMATIC TEXT EFFECTS</h3><p>Typography synchronization and smooth overlays.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="f11478845bfd43df4722e1bbbeb53527.jpg" alt="Project 4">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032295.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 4</h3>
-                    <p>यह आपकी चौथी इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>PREMIUM GLOW & TRANSITION</h3><p>Aesthetic color grading and fluid character movement.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="a9eea3a01927a1fc7fc8251a6d203f53.jpg" alt="Project 5">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032298.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 5</h3>
-                    <p>यह आपकी पांचवीं इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>INSTAGRAM UI MANIPULATION</h3><p>Viral hook designs and trendy UI mockups animation.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="bac9afa9f478656c6d3b848471bdbc89.jpg" alt="Project 6">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032304.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 6</h3>
-                    <p>यह आपकी छठी इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>MAGAZINE OVERLAY EDIT</h3><p>Creative frame borders and newspaper slide transition.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="010384d73b1dd61f5b2bd0494e3e5d28.jpg" alt="Project 7">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032307.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 7</h3>
-                    <p>यह आपकी सातवीं इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>SHAPE MASK GRAPHICS</h3><p>Geometric custom masks and fast typography flow.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="6471ac97b060bd5076e944047dd6665f.jpg" alt="Project 8">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032308.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 8</h3>
-                    <p>यह आपकी आठवीं इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>WAVE SEPARATOR CONCEPT</h3><p>Vector wave background and smooth presentation.</p></div>
             </div>
 
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="c5182c8f9ccdada854c123debaa6b9c0.jpg" alt="Project 9">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032299.mp4" type="video/mp4"></video>
                 </div>
-                <div class="content">
-                    <h3>Project Section 9</h3>
-                    <p>यह आपकी नौवीं इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
+                <div class="portfolio-info"><h3>CHRONO FILMSTRIP EDIT</h3><p>Retro filter design and dynamic geometric spin.</p></div>
             </div>
-
-            <div class="portfolio-item">
-                <div class="media-container">
-                    <img src="085803d7b2457409637d9dc462aca089.jpg" alt="Project 10">
-                </div>
-                <div class="content">
-                    <h3>Project Section 10</h3>
-                    <p>यह आपकी दसवीं इमेज के साथ सेट किया गया प्रोजेक्ट वर्क है।</p>
-                </div>
-            </div>
-
         </div>
-    </div>
 
+        <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 50px auto; max-width: 60%;" />
+
+        <h2 class="section-title">PREMIUM <span>GRAPHIC DESIGNS</span></h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="d4b8f9a965ada05816219f382658885b.jpg" alt="Graphic Edit 1">
+            </div>
+            <div class="gallery-card">
+                <img src="14e1b04d2f6a3bd6d409f85a1ad08164.jpg" alt="Graphic Edit 2">
+            </div>
+            <div class="gallery-card">
+                <img src="29a779733b2062887d629846a7a108c5.jpg" alt="Graphic Edit 3">
+            </div>
+            <div class="gallery-card">
+                <img src="f11478845bfd43df4722e1bbbeb53527.jpg" alt="Graphic Edit 4">
+            </div>
+            <div class="gallery-card">
+                <img src="a9eea3a01927a1fc7fc8251a6d203f53.jpg" alt="Graphic Edit 5">
+            </div>
+            <div class="gallery-card">
+                <img src="bac9afa9f478656c6d3b848471bdbc89.jpg" alt="Graphic Edit 6">
+            </div>
+            <div class="gallery-card">
+                <img src="010384d73b1dd61f5b2bd0494e3e5d28.jpg" alt="Graphic Edit 7">
+            </div>
+            <div class="gallery-card">
+                <img src="6471ac97b060bd5076e944047dd6665f.jpg" alt="Graphic Edit 8">
+            </div>
+            <div class="gallery-card">
+                <img src="c5182c8f9ccdada854c123debaa6b9c0.jpg" alt="Graphic Edit 9">
+            </div>
+            <div class="gallery-card">
+                <img src="085803d7b2457409637d9dc462aca089.jpg" alt="Graphic Edit 10">
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="https://wa.me/917061116240?text=Hi, I checked your elite portfolio and want to hire you for editing!" target="_blank" class="whatsapp-btn" style="padding: 15px 35px; font-size: 1rem;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> ORDER YOUR CUSTOM EDIT</a>
+        </div>
+    </main>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
+
