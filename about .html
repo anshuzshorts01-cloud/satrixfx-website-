@@ -1,161 +1,76 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Our Team | Satrixfx</title>
-    <style>
-        :root {
-            --bg-dark: #0b0f0c;
-            --card-bg: rgba(20, 28, 23, 0.6);
-            --neon-green: #00ff66;
-            --text-main: #ffffff;
-            --text-muted: #a3b8a8;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Segoe UI', sans-serif;
-            background-image: radial-gradient(circle at 50% -20%, rgba(0, 255, 102, 0.1), transparent 40%);
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background: rgba(11, 15, 12, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 255, 102, 0.1);
-        }
-
-        .back-btn {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 8px 16px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            border-color: var(--neon-green);
-            color: var(--neon-green);
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 60px auto;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 35px;
-        }
-        h1 span { color: var(--neon-green); }
-
-        .content-box {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 255, 102, 0.05);
-            padding: 40px;
-            border-radius: 16px;
-            line-height: 1.8;
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 50px;
-        }
-
-        .team-title {
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 30px;
-            color: #ffffff;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-        }
-
-        .member-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 12px;
-            padding: 25px;
-            text-align: center;
-            transition: 0.3s;
-        }
-        .member-card:hover {
-            border-color: var(--neon-green);
-        }
-
-        .member-avatar {
-            width: 70px;
-            height: 70px;
-            background: rgba(0, 255, 102, 0.1);
-            border-radius: 50%;
-            margin: 0 auto 15px auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            color: var(--neon-green);
-        }
-
-        .member-card h3 {
-            margin: 10px 0 5px 0;
-            color: #fff;
-            font-size: 1.2rem;
-        }
-
-        .member-card p {
-            margin: 0;
-            color: var(--neon-green);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-    </style>
+    <title>About Us - SATRIXFX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <a href="#" class="back-btn" onclick="history.back(); return false;">← Back</a>
-        <div style="font-weight: bold; font-size: 1.2rem;">Satrix<span>fx</span></div>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color:inherit; text-decoration:none;">SATRIX<span>★</span>FX</a>
+            <div style="margin-top: 5px;"><a href="index.html" style="color: #888; text-decoration: none; font-size: 0.75rem; font-family: 'Poppins', sans-serif; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-arrow-left" style="color: #ff3333; margin-right: 4px;"></i> BACK TO HOME</a></div>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="photo.html">PHOTO</a>
+            <a href="video.html">VIDEO</a>
+            <a href="instagram.html">INSTAGRAM</a>
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="about.html" style="color: #ff3333;">ABOUT</a>
+        </nav>
     </header>
 
-    <div class="container">
-        <h1>About Satrix<span>fx</span></h1>
-        
-        <div class="content-box">
-            <p>Hum aapke content ko normal se super-creative banane ke liye commit hain. Chahe baat high-retention video editing ki ho ya fir flawless photo manipulation ki, hum har project par deeply kaam karte hain taaki aapko mile sabse premium aur professional output. Hamara focus sirf edit karne par nahi, balki aapke brand ki value badhane par hai. Hum technical excellence ke sath creative marketing engineering ko blend karte hain.</p>
+    <main class="home-section-scroll" style="padding-top: 140px; max-width: 800px; margin: 0 auto;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <div class="brand-badge">WHO WE ARE</div>
+            <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 2px;">ABOUT SATRIXFX</h1>
         </div>
 
-        <h2 class="team-title">Our Creative Core Team</h2>
-        <div class="team-grid">
-            <div class="member-card">
-                <div class="member-avatar">👑</div>
-                <h3>Lead Editor</h3>
-                <p>Creative Director</p>
-            </div>
-            <div class="member-card">
-                <div class="member-avatar">🎨</div>
-                <h3>Visual Artist</h3>
-                <p>Photo & VFX Expert</p>
-            </div>
-            <div class="member-card">
-                <div class="member-avatar">📊</div>
-                <h3>Growth Strategist</h3>
-                <p>Instagram Engineer</p>
+        <div style="background: #111; border: 1px solid #222; padding: 40px 30px; line-height: 1.8; color: #ccc; font-size: 1.05rem; margin-bottom: 40px; border-radius: 4px;">
+            <p style="margin-bottom: 20px;">
+                At <strong>SatrixFX</strong>, we don’t just edit photos and videos — we create emotions people can feel. Our team is filled with highly skilled creators and passionate editors who specialize in cinematic video edits, premium photo manipulation, eye-catching banners, thumbnails, and creative visual designs that leave a lasting impression.
+            </p>
+            <p style="margin-bottom: 20px;">
+                We respect every client’s vision and feelings, which is why we always aim to deliver top-quality work at a fair and affordable price. Whether it’s a personal project, social media content, or professional branding, SatrixFX is always ready to turn your ideas into reality with creativity and perfection.
+            </p>
+            
+            <div style="border-top: 1px dashed #333; margin: 30px 0; padding-top: 20px;">
+                <h3 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: #fff; letter-spacing: 1px; margin-bottom: 10px;"><i class="fa-solid fa-clock" style="color: #ff3333; margin-right: 8px;"></i> 24×7 LIVE SUPPORT</h3>
+                <p style="font-size: 0.95rem; color: #888;"> Our support is available 24×7, so if you ever face any issue or need any kind of editing service, feel free to contact us anytime — we’re always here for you.</p>
             </div>
         </div>
-    </div>
 
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 1px; margin-bottom: 25px;">GET IN TOUCH NOW</h2>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: 0 auto;">
+                <a href="mailto:Anshuzshorts.01@gmail.com" class="whatsapp-btn" style="background: #222; border: 1px solid #ff3333; font-size: 0.95rem; text-align: left; padding: 15px 20px; display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-solid fa-envelope" style="color: #ff3333; font-size: 1.2rem;"></i> <strong>Email:</strong> Anshuzshorts.01@gmail.com
+                </a>
+                <a href="https://wa.me/917061116240?text=Hi, I need assistance regarding your services." target="_blank" class="whatsapp-btn" style="font-size: 0.95rem; text-align: left; padding: 15px 20px; display: flex; align-items: center; gap: 12px;">
+                    <i class="fa-brands fa-whatsapp" style="font-size: 1.3rem;"></i> <strong>Contact:</strong> +91 7061116240
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
