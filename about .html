@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Our Team | Satrixfx</title>
+    <style>
+        :root {
+            --bg-dark: #0b0f0c;
+            --card-bg: rgba(20, 28, 23, 0.6);
+            --neon-green: #00ff66;
+            --text-main: #ffffff;
+            --text-muted: #a3b8a8;
+        }
+
+        body {
+            margin: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', sans-serif;
+            background-image: radial-gradient(circle at 50% -20%, rgba(0, 255, 102, 0.1), transparent 40%);
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: rgba(11, 15, 12, 0.7);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(0, 255, 102, 0.1);
+        }
+
+        .back-btn {
+            background: transparent;
+            color: var(--text-main);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 8px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            border-color: var(--neon-green);
+            color: var(--neon-green);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+        h1 span { color: var(--neon-green); }
+
+        .content-box {
+            background: var(--card-bg);
+            border: 1px solid rgba(0, 255, 102, 0.05);
+            padding: 40px;
+            border-radius: 16px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+        }
+
+        .team-title {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #ffffff;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .member-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+        .member-card:hover {
+            border-color: var(--neon-green);
+        }
+
+        .member-avatar {
+            width: 70px;
+            height: 70px;
+            background: rgba(0, 255, 102, 0.1);
+            border-radius: 50%;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: var(--neon-green);
+        }
+
+        .member-card h3 {
+            margin: 10px 0 5px 0;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+
+        .member-card p {
+            margin: 0;
+            color: var(--neon-green);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="back-btn" onclick="history.back(); return false;">← Back</a>
+        <div style="font-weight: bold; font-size: 1.2rem;">Satrix<span>fx</span></div>
+    </header>
+
+    <div class="container">
+        <h1>About Satrix<span>fx</span></h1>
+        
+        <div class="content-box">
+            <p>Hum aapke content ko normal se super-creative banane ke liye commit hain. Chahe baat high-retention video editing ki ho ya fir flawless photo manipulation ki, hum har project par deeply kaam karte hain taaki aapko mile sabse premium aur professional output. Hamara focus sirf edit karne par nahi, balki aapke brand ki value badhane par hai. Hum technical excellence ke sath creative marketing engineering ko blend karte hain.</p>
+        </div>
+
+        <h2 class="team-title">Our Creative Core Team</h2>
+        <div class="team-grid">
+            <div class="member-card">
+                <div class="member-avatar">👑</div>
+                <h3>Lead Editor</h3>
+                <p>Creative Director</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">🎨</div>
+                <h3>Visual Artist</h3>
+                <p>Photo & VFX Expert</p>
+            </div>
+            <div class="member-card">
+                <div class="member-avatar">📊</div>
+                <h3>Growth Strategist</h3>
+                <p>Instagram Engineer</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
