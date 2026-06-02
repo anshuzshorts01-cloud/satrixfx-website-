@@ -1,322 +1,167 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satrixfx | Intelligence That Grows With You</title>
+    <title>SATRIXFX - Creative Agency</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --bg-dark: #0b0f0c; 
-            --card-bg: rgba(20, 28, 23, 0.6); 
-            --neon-green: #00ff66; 
-            --text-main: #ffffff;
-            --text-muted: #a3b8a8;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Segoe UI', Roboto, sans-serif;
-            background-image: radial-gradient(circle at 50% -20%, rgba(0, 255, 102, 0.15), transparent 50%);
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background: rgba(11, 15, 12, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 255, 102, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            color: var(--text-main);
-            text-transform: uppercase;
-        }
-        .logo span { color: var(--neon-green); }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 0.95rem;
-            transition: 0.3s;
-        }
-        nav a:hover { color: var(--neon-green); }
-
-        .btn-header {
-            background: rgba(0, 255, 102, 0.1);
-            border: 1px solid var(--neon-green);
-            color: var(--neon-green);
-            padding: 10px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            box-shadow: 0 0 15px rgba(0, 255, 102, 0.2);
-            transition: 0.3s;
-        }
-        .btn-header:hover {
-            background: var(--neon-green);
-            color: #000;
-            box-shadow: 0 0 25px var(--neon-green);
-        }
-
-        .hero {
-            text-align: center;
-            padding: 100px 20px 60px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 20px;
-        }
-        .hero h1 span {
-            color: var(--neon-green);
-            font-style: italic;
-            font-weight: 400;
-        }
-
-        .hero p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 40px;
-        }
-
-        .rotating-offer-badge {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 90px;
-            height: 90px;
-            background: radial-gradient(circle, #00ff66, #004d1a);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font-size: 0.75rem;
-            font-weight: bold;
-            color: #000;
-            box-shadow: 0 0 20px rgba(0, 255, 102, 0.4);
-            z-index: 9999;
-            animation: rotate360 12s linear infinite;
-            border: 2px dashed #000;
-        }
-        @keyframes rotate360 {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        .services-section {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .main-box {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 255, 102, 0.08);
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: left;
-            backdrop-filter: blur(8px);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .main-box:hover {
-            border-color: rgba(0, 255, 102, 0.4);
-            box-shadow: 0 10px 30px rgba(0, 255, 102, 0.05);
-            transform: translateY(-5px);
-        }
-
-        .icon-box {
-            width: 50px;
-            height: 50px;
-            background: rgba(0, 255, 102, 0.1);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--neon-green);
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .main-box h3 {
-            font-size: 1.5rem;
-            margin: 0 0 15px 0;
-        }
-
-        .main-box p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 30px;
-        }
-
-        .view-plan-btn {
-            background: #ffffff;
-            color: #0b0f0c;
-            text-decoration: none;
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-align: center;
-            font-weight: 600;
-            transition: 0.3s;
-            display: inline-block;
-        }
-
-        .main-box:hover .view-plan-btn {
-            background: var(--neon-green);
-            box-shadow: 0 0 15px var(--neon-green);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin: 80px 0 40px 0;
-            position: relative;
-        }
-        .section-title span { color: var(--neon-green); }
-
-        .about-brief {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 255, 102, 0.05);
-            padding: 40px;
-            border-radius: 16px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-            line-height: 1.8;
-            color: var(--text-muted);
-        }
-        .about-brief a {
-            color: var(--neon-green);
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 15px;
-        }
-
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 0 auto 80px auto;
-        }
-
-        .review-card {
-            background: var(--card-bg);
-            border-left: 3px solid var(--neon-green);
-            padding: 25px;
-            border-radius: 8px;
-        }
-
-        .review-text {
-            font-style: italic;
-            color: var(--text-muted);
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-
-        .client-name {
-            font-weight: bold;
-            color: #ffffff;
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">Satrix<span>fx</span></div>
-        <nav>
-            <a href="about.html">About Us</a>
+    <header class="navbar">
+        <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">SATRIX<span>★</span>FX</a></div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-menu">
+            <a href="photo.html">PHOTO</a>
+            <a href="video.html">VIDEO</a>
+            <a href="instagram.html">INSTAGRAM</a>
+            <a href="#home-about" class="scroll-link">ABOUT</a>
+            <a href="#home-feedback" class="scroll-link">FEEDBACK</a>
         </nav>
-        <a href="https://wa.me/918292419409" class="btn-header">Let's Talk →</a>
     </header>
 
-    <div class="rotating-offer-badge">20% OFF<br>EACH EDIT*</div>
+    <main class="hero-container">
+        <div class="cast-bar">
+            <span>PREMIUM EDITING</span>
+            <span>HIGH QUALITY</span>
+            <span>FAST DELIVERY</span>
+        </div>
 
-    <div class="hero">
-        <h1>Visuals that <span>grow</span> with you.</h1>
-        <p>The all-in-one platform for creators and brands who want absolute retention, lightning speed, and sustainable growth.</p>
-    </div>
+        <div class="main-visual">
+            <h1 class="bg-title">CREATIVE</h1>
+            <img src="Picsart_26-05-30_20-10-36-364.png" alt="SATRIXFX Visual" class="character-img">
+            <span class="year-badge">[2026]</span>
+        </div>
 
-    <section class="services-section">
-        <div class="grid">
-            <div class="main-box">
-                <div>
-                    <div class="icon-box">📷</div>
-                    <h3>Photo Editing</h3>
-                    <p>High-end skin retouching, aesthetic color manipulations, and professional layouts tailored for a premium magazine feel.</p>
-                </div>
-                <a href="photo.html" class="view-plan-btn">View Plans →</a>
+        <section class="info-panel">
+            <div class="panel-left">
+                <div class="brand-badge">OUR MISSION</div>
+                <p class="description">We transform your raw content into cinematic masterpieces. Explore our professional photo, video, and social media services.</p>
             </div>
-
-            <div class="main-box">
-                <div>
-                    <div class="icon-box">🎬</div>
-                    <h3>Video Editing</h3>
-                    <p>Viral vertical reels, high-retention horizontal editing, premium sound design, and flawless storytelling mechanics.</p>
-                </div>
-                <a href="video.html" class="view-plan-btn">View Plans →</a>
+            <div class="panel-right">
+                <a href="#all-services" class="cta-btn">VIEW PLANS <span>➔</span></a>
             </div>
+        </section>
+    </main>
 
-            <div class="main-box">
-                <div>
-                    <div class="icon-box">📸</div>
-                    <h3>Instagram Editing</h3>
-                    <p>Custom theme curation, puzzle grids, viral carousel designs, and aesthetic layout scaling to capture instant attention.</p>
-                </div>
-                <a href="instagram.html" class="view-plan-btn">View Plans →</a>
-            </div>
+    <section class="services-container" id="all-services">
+        <div class="service-card">
+            <h2 class="service-title">PHOTO EDITING</h2>
+            <p class="service-desc">Premium manipulation, background change, color grading, and realistic composition.</p>
+            <div class="price-tag"><span class="old-price">₹149</span> ₹49<span class="per-service"> / Starting</span></div>
+            <a href="photo.html" class="whatsapp-btn">View Plans & Pricing</a>
+        </div>
+
+        <div class="service-card">
+            <h2 class="service-title">VIDEO EDITING</h2>
+            <p class="service-desc">Cinematic transitions, sound design, engaging text/effects, and high-retention editing.</p>
+            <div class="price-tag"><span class="old-price">₹149</span> ₹49<span class="per-service"> / Starting</span></div>
+            <a href="video.html" class="whatsapp-btn">View Plans & Pricing</a>
+        </div>
+
+        <div class="service-card">
+            <h2 class="service-title">INSTAGRAM GROWTH</h2>
+            <p class="service-desc">Page optimization, content strategy, aesthetics enhancement, and engagement booster.</p>
+            <div class="price-tag"><span class="old-price">₹99</span> ₹29<span class="per-service"> / Starting</span></div>
+            <a href="instagram.html" class="whatsapp-btn">View Plans & Pricing</a>
         </div>
     </section>
 
-    <h2 class="section-title">Why Satrix<span>fx</span></h2>
-    <div class="about-brief">
-        <p>Hum aapke content ko normal se super-creative banane ke liye commit hain. Chahe baat high-retention video editing ki ho ya fir flawless photo manipulation ki, hum har project par deeply kaam karte hain taaki aapko mile sabse premium aur professional output.</p>
-        <a href="about.html">Meet Our Team & Explore More →</a>
-    </div>
+    <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 40px auto; max-width: 80%;" />
 
-    <h2 class="section-title">Reviews</h2>
-    <div class="reviews-grid">
-        <div class="review-card">
-            <p class="review-text">"Satrixfx ne hamare Instagram reels ka poora engagement badal diya. Quality aur delivery speed kamaal ki hai!"</p>
-            <p class="client-name">- Aarav Sharma (Content Creator)</p>
+    <section class="home-section-scroll" id="home-about" style="text-align: center;">
+        <div class="brand-badge" style="margin-bottom: 20px;">WHO WE ARE</div>
+        <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px; margin-bottom: 20px;">ABOUT SATRIXFX</h2>
+        
+        <p style="font-size: 1.05rem; line-height: 1.8; color: #ccc; margin-bottom: 25px;">
+            Welcome to <strong>SATRIXFX</strong>! We are a dedicated network of professional creators and editors working together behind the scenes. Our specialized team combines years of experience in high-end photo manipulation, retention-focused video editing, and advanced social media growth tactics.
+        </p>
+        <p style="font-size: 1.05rem; line-height: 1.8; color: #ccc; margin-bottom: 35px;">
+            Whether you want to go viral on Instagram, boost your YouTube retention, or get striking designs, our team handles it with clockwork precision.
+        </p>
+
+        <h4 style="font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 1px; color: #fff; margin-bottom: 5px;">CONNECT WITH OUR TEAM</h4>
+        <p style="color: #888; font-size: 0.9rem; margin-bottom: 25px;">Email us at: <a href="mailto:Anshuzshorts.01@gmail.com" style="color: #ff3333; text-decoration: none; font-weight: 600;">Anshuzshorts.01@gmail.com</a></p>
+
+        <div style="display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+            <a href="https://wa.me/917061116240" target="_blank" class="whatsapp-btn" style="padding: 10px 20px; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa-brands fa-whatsapp" style="font-size: 1.1rem;"></i> WHATSAPP
+            </a>
+            <a href="https://youtube.com/@satrixfx?si=AI3D6oIpqXQX8vYL" target="_blank" class="whatsapp-btn" style="padding: 10px 20px; font-size: 0.85rem; background: #ff0000; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa-brands fa-youtube" style="font-size: 1.1rem;"></i> YOUTUBE
+            </a>
+            <a href="https://www.instagram.com/satrixfx?igsh=cHRncHo0bWh2MG1n" target="_blank" class="whatsapp-btn" style="padding: 10px 20px; font-size: 0.85rem; background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa-brands fa-instagram" style="font-size: 1.1rem;"></i> INSTAGRAM
+            </a>
+            <a href="https://www.facebook.com/share/1CraJXpLmk/" target="_blank" class="whatsapp-btn" style="padding: 10px 20px; font-size: 0.85rem; background: #1877f2; display: inline-flex; align-items: center; gap: 8px;">
+                <i class="fa-brands fa-facebook-f" style="font-size: 1rem;"></i> FACEBOOK
+            </a>
         </div>
-        <div class="review-card">
-            <p class="review-text">"Photo manipulation ka kaam itna smooth tha ki lag hi nahi raha tha edit kiya hua hai. Highly recommended!"</p>
-            <p class="client-name">- Rohan Verma (Photographer)</p>
+    </section>
+
+    <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 40px auto; max-width: 80%;" />
+
+    <section class="home-section-scroll" id="home-feedback">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <div class="brand-badge" style="margin-bottom: 20px;">REVIEWS</div>
+            <h2 style="font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px;"> WHAT CLIENTS SAY</h2>
         </div>
-        <div class="review-card">
-            <p class="review-text">"Professional approach aur behtareen communication. Har edit par perfection milti hai."</p>
-            <p class="client-name">- Nisha Patel (Business Owner)</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <div class="service-card" style="padding: 25px; border-radius: 12px;">
+                <h3 style="color: #ff3333; margin-bottom: 10px;">★★★★★</h3>
+                <p style="font-style: italic; color: #ddd; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px;">"The retention on my Reels shot up after getting them edited by the SATRIXFX team. Absolute beasts!"</p>
+                <div style="font-size: 0.85rem; color: #fff;">— Rohan K. <span style="font-size: 0.7rem; color: #888;">(Creator)</span></div>
+            </div>
+
+            <div class="service-card" style="padding: 25px; border-radius: 12px;">
+                <h3 style="color: #ff3333; margin-bottom: 10px;">★★★★★</h3>
+                <p style="font-style: italic; color: #ddd; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px;">"Ordered the Premium Photo Manipulation. The attention to detail and color balancing is next-level."</p>
+                <div style="font-size: 0.85rem; color: #fff;">— Aman Sharma <span style="font-size: 0.7rem; color: #888;">(Photographer)</span></div>
+            </div>
+
+            <div class="service-card" style="padding: 25px; border-radius: 12px;">
+                <h3 style="color: #ff3333; margin-bottom: 10px;">★★★★★</h3>
+                <p style="font-style: italic; color: #ddd; font-size: 0.85rem; line-height: 1.5; margin-bottom: 15px;">"Their Instagram followers booster service actually works. Got real growth under 48 hours."</p>
+                <div style="font-size: 0.85rem; color: #fff;">— Sneha Das <span style="font-size: 0.7rem; color: #888;">(Business)</span></div>
+            </div>
         </div>
-    </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://wa.me/917061116240?text=Hi, I want to give a feedback about your service:" target="_blank" class="whatsapp-btn" style="display: inline-block; padding: 12px 30px;">SUBMIT YOUR REVIEW</a>
+        </div>
+    </section>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        const scrollLinks = document.querySelectorAll('.scroll-link');
+
+        // Toggle menu open/close
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu automatically when ABOUT or FEEDBACK is clicked
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
