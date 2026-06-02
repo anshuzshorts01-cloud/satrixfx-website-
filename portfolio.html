@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Satrixfx</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #ffffff;
+            --accent-neon: #00f0ff;
+            --accent-pink: #ff007f;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Premium Header */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .back-btn {
+            background: transparent;
+            color: var(--text-color);
+            border: 1px solid var(--accent-neon);
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: var(--accent-neon);
+            color: #000;
+            box-shadow: 0 0 15px var(--accent-neon);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #fff, #888);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        main {
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            background: linear-gradient(45deg, var(--accent-neon), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 1. Interactive Before/After Slider Section */
+        .slider-section {
+            margin-bottom: 60px;
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .slider-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .img-before {
+            /* Aap apni photo ka path yahan dalen */
+            background-image: url('before-sample.jpg'); 
+        }
+
+        .img-after {
+            /* Aap apni photo ka path yahan dalen */
+            background-image: url('after-sample.jpg');
+            width: 50%; /* Initial width for slider */
+            border-right: 3px solid var(--accent-neon);
+        }
+
+        .slider-handle {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 4px;
+            height: 100%;
+            background: var(--accent-neon);
+            cursor: ew-resize;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px var(--accent-neon);
+        }
+
+        .slider-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border: 2px solid var(--accent-neon);
+            border-radius: 50%;
+            color: var(--accent-neon);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            pointer-events: none;
+            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+
+        /* 2. Video Grid Section (Reels/Shorts) */
+        .video-section {
+            margin-top: 60px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .video-card {
+            background: #111;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-pink);
+        }
+
+        .video-card video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h4 {
+            margin: 0 0 10px 0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="back-btn">← Back</a>
+        <div class="logo">SATRIXFX</div>
+        <div style="width: 75px;"></div> </header>
+
+    <main>
+        <h2>Our Premium Masterpieces</h2>
+
+        <div class="slider-section">
+            <h3 style="text-align: center; color: #aaa; margin-bottom: 20px;">Photo Editing (Before / After)</h3>
+            <div class="slider-container" id="photoSlider">
+                <div class="slider-img img-before"></div>
+                <div class="slider-img img-after" id="afterImage"></div>
+                <div class="slider-handle" id="sliderHandle">
+                    <div class="slider-button">&lt;&gt;</div>
+                </div>
+            </div>
+        </div>
+
+        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 60px 0;">
+
+        <div class="video-section">
+            <h3 style="text-align: center; color: #aaa; margin-bottom: 20px;">Video & Reel Edits</h3>
+            <div class="video-grid">
+                <div class="video-card">
+                    <video src="reel1.mp4" controls preload="metadata"></video>
+                    <div class="video-info">
+                        <h4>Instagram Reel Edit #1</h4>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <video src="reel2.mp4" controls preload="metadata"></video>
+                    <div class="video-info">
+                        <h4>Cinematic Short Edit #2</h4>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <video src="reel3.mp4" controls preload="metadata"></video>
+                    <div class="video-info">
+                        <h4>Viral Hook Concept #3</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const slider = document.getElementById('photoSlider');
+        const afterImage = document.getElementById('afterImage');
+        const handle = document.getElementById('sliderHandle');
+
+        let isResizing = false;
+
+        function moveSlider(x) {
+            const rect = slider.getBoundingClientRect();
+            let position = ((x - rect.left) / rect.width) * 100;
+            
+            if (position < 0) position = 0;
+            if (position > 100) position = 100;
+
+            afterImage.style.width = `${position}%`;
+            handle.style.left = `${position}%`;
+        }
+
+        handle.addEventListener('mousedown', () => isResizing = true);
+        window.addEventListener('mouseup', () => isResizing = false);
+        
+        window.addEventListener('mousemove', (e) => {
+            if (!isResizing) return;
+            moveSlider(e.clientX);
+        });
+
+        // Touch support for mobiles
+        handle.addEventListener('touchstart', () => isResizing = true);
+        window.addEventListener('touchend', () => isResizing = false);
+        window.addEventListener('touchmove', (e) => {
+            if (!isResizing) return;
+            moveSlider(e.touches[0].clientX);
+        });
+    </script>
+</body>
+</html>
