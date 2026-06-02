@@ -1,267 +1,78 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Satrixfx</title>
-    <style>
-        :root {
-            --bg-color: #0a0a0a;
-            --text-color: #ffffff;
-            --accent-neon: #00f0ff;
-            --accent-pink: #ff007f;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        /* Premium Header */
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .back-btn {
-            background: transparent;
-            color: var(--text-color);
-            border: 1px solid var(--accent-neon);
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            background: var(--accent-neon);
-            color: #000;
-            box-shadow: 0 0 15px var(--accent-neon);
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #fff, #888);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        main {
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            background: linear-gradient(45deg, var(--accent-neon), var(--accent-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* 1. Interactive Before/After Slider Section */
-        .slider-section {
-            margin-bottom: 60px;
-        }
-
-        .slider-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            height: 450px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-
-        .slider-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .img-before {
-            /* Aap apni photo ka path yahan dalen */
-            background-image: url('before-sample.jpg'); 
-        }
-
-        .img-after {
-            /* Aap apni photo ka path yahan dalen */
-            background-image: url('after-sample.jpg');
-            width: 50%; /* Initial width for slider */
-            border-right: 3px solid var(--accent-neon);
-        }
-
-        .slider-handle {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: var(--accent-neon);
-            cursor: ew-resize;
-            transform: translateX(-50%);
-            box-shadow: 0 0 10px var(--accent-neon);
-        }
-
-        .slider-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 40px;
-            height: 40px;
-            background: #000;
-            border: 2px solid var(--accent-neon);
-            border-radius: 50%;
-            color: var(--accent-neon);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            pointer-events: none;
-            box-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
-        }
-
-        /* 2. Video Grid Section (Reels/Shorts) */
-        .video-section {
-            margin-top: 60px;
-        }
-
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .video-card {
-            background: #111;
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-
-        .video-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-pink);
-        }
-
-        .video-card video {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .video-info {
-            padding: 15px;
-        }
-
-        .video-info h4 {
-            margin: 0 0 10px 0;
-            color: #fff;
-        }
-    </style>
+    <title>Our Portfolio - SATRIXFX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header>
-        <a href="index.html" class="back-btn">← Back</a>
-        <div class="logo">SATRIXFX</div>
-        <div style="width: 75px;"></div> </header>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="color:inherit; text-decoration:none;">SATRIX<span>★</span>FX</a>
+            <div style="margin-top: 5px;"><a href="index.html" style="color: #888; text-decoration: none; font-size: 0.75rem; font-family: 'Poppins', sans-serif; letter-spacing: 1px; font-weight: 600;"><i class="fa-solid fa-arrow-left" style="color: #ff3333; margin-right: 4px;"></i> BACK TO HOME</a></div>
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links" id="nav-menu">
+            <a href="index.html">HOME</a>
+            <a href="photo.html">PHOTO</a>
+            <a href="video.html">VIDEO</a>
+            <a href="instagram.html">INSTAGRAM</a>
+            <a href="portfolio.html" style="color: #ff3333;">PORTFOLIO</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
 
-    <main>
-        <h2>Our Premium Masterpieces</h2>
-
-        <div class="slider-section">
-            <h3 style="text-align: center; color: #aaa; margin-bottom: 20px;">Photo Editing (Before / After)</h3>
-            <div class="slider-container" id="photoSlider">
-                <div class="slider-img img-before"></div>
-                <div class="slider-img img-after" id="afterImage"></div>
-                <div class="slider-handle" id="sliderHandle">
-                    <div class="slider-button">&lt;&gt;</div>
-                </div>
-            </div>
+    <main class="home-section-scroll" style="padding-top: 140px;">
+        <div style="text-align: center; margin-bottom: 50px;">
+            <div class="brand-badge">OUR CREATIONS</div>
+            <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 2px;">WORK PORTFOLIO</h1>
+            <p style="color: #888; max-width: 600px; margin: 15px auto 0 auto; font-size: 0.95rem;">Take a look at what we create. High-end results, cinematic visuals, and data-driven strategies.</p>
         </div>
 
-        <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 60px 0;">
+        <div class="services-container" style="padding: 0;">
+            <div class="service-card">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fa-solid fa-camera" style="font-size: 3rem; color: #ff3333; margin-bottom: 15px;"></i>
+                    <h2 class="service-title">PHOTO MANIPULATION</h2>
+                    <p class="service-desc">Thumbnails, posters, flyers, and premium high-end photo adjustments.</p>
+                </div>
+                <a href="#" target="_blank" class="whatsapp-btn" style="background: #222; border: 1px solid #ff3333;">VIEW SAMPLES</a>
+            </div>
 
-        <div class="video-section">
-            <h3 style="text-align: center; color: #aaa; margin-bottom: 20px;">Video & Reel Edits</h3>
-            <div class="video-grid">
-                <div class="video-card">
-                    <video src="reel1.mp4" controls preload="metadata"></video>
-                    <div class="video-info">
-                        <h4>Instagram Reel Edit #1</h4>
-                    </div>
+            <div class="service-card" style="border-color: #ff3333;">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fa-solid fa-clapperboard" style="font-size: 3rem; color: #ff3333; margin-bottom: 15px;"></i>
+                    <h2 class="service-title">VIDEO PROJECTS</h2>
+                    <p class="service-desc">Viral Reels/Shorts edits, professional vlogs, high retention video, and ads.</p>
                 </div>
-                <div class="video-card">
-                    <video src="reel2.mp4" controls preload="metadata"></video>
-                    <div class="video-info">
-                        <h4>Cinematic Short Edit #2</h4>
-                    </div>
+                <a href="https://youtube.com/@satrixfx?si=AI3D6oIpqXQX8vYL" target="_blank" class="whatsapp-btn">WATCH ON YOUTUBE</a>
+            </div>
+
+            <div class="service-card">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <i class="fa-brands fa-instagram" style="font-size: 3rem; color: #ff3333; margin-bottom: 15px;"></i>
+                    <h2 class="service-title">SOCIAL MEDIA GROWTH</h2>
+                    <p class="service-desc">Client case studies, aesthetic feed layouts, and strategy reviews.</p>
                 </div>
-                <div class="video-card">
-                    <video src="reel3.mp4" controls preload="metadata"></video>
-                    <div class="video-info">
-                        <h4>Viral Hook Concept #3</h4>
-                    </div>
-                </div>
+                <a href="https://www.instagram.com/satrixfx?igsh=cHRncHo0bWh2MG1n" target="_blank" class="whatsapp-btn" style="background: #222; border: 1px solid #ff3333;">VIEW INSTAGRAM</a>
             </div>
         </div>
     </main>
 
     <script>
-        const slider = document.getElementById('photoSlider');
-        const afterImage = document.getElementById('afterImage');
-        const handle = document.getElementById('sliderHandle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
 
-        let isResizing = false;
-
-        function moveSlider(x) {
-            const rect = slider.getBoundingClientRect();
-            let position = ((x - rect.left) / rect.width) * 100;
-            
-            if (position < 0) position = 0;
-            if (position > 100) position = 100;
-
-            afterImage.style.width = `${position}%`;
-            handle.style.left = `${position}%`;
-        }
-
-        handle.addEventListener('mousedown', () => isResizing = true);
-        window.addEventListener('mouseup', () => isResizing = false);
-        
-        window.addEventListener('mousemove', (e) => {
-            if (!isResizing) return;
-            moveSlider(e.clientX);
-        });
-
-        // Touch support for mobiles
-        handle.addEventListener('touchstart', () => isResizing = true);
-        window.addEventListener('touchend', () => isResizing = false);
-        window.addEventListener('touchmove', (e) => {
-            if (!isResizing) return;
-            moveSlider(e.touches[0].clientX);
+        mobileMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
     </script>
 </body>
