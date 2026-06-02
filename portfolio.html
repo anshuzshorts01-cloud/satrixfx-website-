@@ -7,6 +7,96 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-align: center;
+            margin: 50px 0 20px 0;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        .section-title span {
+            color: #ff3333;
+        }
+        
+        /* वीडियो ग्रिड स्टाइल */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .portfolio-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .portfolio-card:hover {
+            border-color: #ff3333;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.2);
+        }
+        .video-container video {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            display: block;
+        }
+        .portfolio-info {
+            padding: 15px;
+            border-top: 1px solid #111;
+        }
+        .portfolio-info h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+        .portfolio-info p {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        /* इमेज गैलरी ग्रिड स्टाइल */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .gallery-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .gallery-card:hover {
+            border-color: #ff3333;
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(255, 51, 51, 0.25);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+    </style>
 </head>
 <body>
 
@@ -30,40 +120,120 @@
         </nav>
     </header>
 
-    <main class="home-section-scroll" style="padding-top: 140px;">
-        <div style="text-align: center; margin-bottom: 50px;">
+    <main class="home-section-scroll" style="padding-top: 140px; padding-bottom: 60px;">
+        <div style="text-align: center; margin-bottom: 30px;">
             <div class="brand-badge">OUR CREATIONS</div>
             <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 2px;">WORK PORTFOLIO</h1>
-            <p style="color: #888; max-width: 600px; margin: 15px auto 0 auto; font-size: 0.95rem;">Take a look at what we create. High-end results, cinematic visuals, and data-driven strategies.</p>
+            <p style="color: #888; max-width: 600px; margin: 15px auto 0 auto; font-size: 0.95rem;">
+                We don’t just edit — we craft memorable high-retention experiences and premium visual artworks.
+            </p>
         </div>
 
-        <div class="services-container" style="padding: 0;">
-            <div class="service-card">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <i class="fa-solid fa-camera" style="font-size: 3rem; color: #ff3333; margin-bottom: 15px;"></i>
-                    <h2 class="service-title">PHOTO MANIPULATION</h2>
-                    <p class="service-desc">Thumbnails, posters, flyers, and premium high-end photo adjustments.</p>
+        <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 20px auto; max-width: 60%;" />
+
+        <h2 class="section-title">FEATURED <span>VIDEO EDITS</span></h2>
+        
+        <div class="portfolio-grid">
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032305.mp4" type="video/mp4"></video>
                 </div>
-                <a href="#" target="_blank" class="whatsapp-btn" style="background: #222; border: 1px solid #ff3333;">VIEW SAMPLES</a>
+                <div class="portfolio-info"><h3>CREATIVE REEL EDIT</h3><p>Advanced pacing, dynamic pop-ups, and audio integration.</p></div>
             </div>
 
-            <div class="service-card" style="border-color: #ff3333;">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <i class="fa-solid fa-clapperboard" style="font-size: 3rem; color: #ff3333; margin-bottom: 15px;"></i>
-                    <h2 class="service-title">VIDEO PROJECTS</h2>
-                    <p class="service-desc">Viral Reels/Shorts edits, professional vlogs, high retention video, and ads.</p>
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032300.mp4" type="video/mp4"></video>
                 </div>
-                <a href="https://youtube.com/@satrixfx?si=AI3D6oIpqXQX8vYL" target="_blank" class="whatsapp-btn">WATCH ON YOUTUBE</a>
+                <div class="portfolio-info"><h3>BIRTHDAY CONCEPT FX</h3><p>Custom frames, grid animations, and beat matching.</p></div>
             </div>
 
-            <div class="service-card">
-                <div style="text-align: center; margin-bottom: 20px;">
-                    <i class="fa-brands fa-instagram" style="font-size: 3rem; color: #ff3333; margin-bottom: 15px;"></i>
-                    <h2 class="service-title">SOCIAL MEDIA GROWTH</h2>
-                    <p class="service-desc">Client case studies, aesthetic feed layouts, and strategy reviews.</p>
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032294.mp4" type="video/mp4"></video>
                 </div>
-                <a href="https://www.instagram.com/satrixfx?igsh=cHRncHo0bWh2MG1n" target="_blank" class="whatsapp-btn" style="background: #222; border: 1px solid #ff3333;">VIEW INSTAGRAM</a>
+                <div class="portfolio-info"><h3>CINEMATIC TEXT EFFECTS</h3><p>Typography synchronization and smooth overlays.</p></div>
             </div>
+
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032295.mp4" type="video/mp4"></video>
+                </div>
+                <div class="portfolio-info"><h3>PREMIUM GLOW & TRANSITION</h3><p>Aesthetic color grading and fluid character movement.</p></div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032298.mp4" type="video/mp4"></video>
+                </div>
+                <div class="portfolio-info"><h3>INSTAGRAM UI MANIPULATION</h3><p>Viral hook designs and trendy UI mockups animation.</p></div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032304.mp4" type="video/mp4"></video>
+                </div>
+                <div class="portfolio-info"><h3>MAGAZINE OVERLAY EDIT</h3><p>Creative frame borders and newspaper slide transition.</p></div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032307.mp4" type="video/mp4"></video>
+                </div>
+                <div class="portfolio-info"><h3>SHAPE MASK GRAPHICS</h3><p>Geometric custom masks and fast typography flow.</p></div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032308.mp4" type="video/mp4"></video>
+                </div>
+                <div class="portfolio-info"><h3>WAVE SEPARATOR CONCEPT</h3><p>Vector wave background and smooth presentation.</p></div>
+            </div>
+
+            <div class="portfolio-card">
+                <div class="video-container">
+                    <video controls preload="metadata"><source src="1000032299.mp4" type="video/mp4"></video>
+                </div>
+                <div class="portfolio-info"><h3>CHRONO FILMSTRIP EDIT</h3><p>Retro filter design and dynamic geometric spin.</p></div>
+            </div>
+        </div>
+
+        <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 50px auto; max-width: 60%;" />
+
+        <h2 class="section-title">PREMIUM <span>GRAPHIC DESIGNS</span></h2>
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="1000032321.jpg" alt="MS Dhoni Poster Design">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032322.jpg" alt="Broken Visual Artwork">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032323.jpg" alt="Headphones Product Banner">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032324.jpg" alt="Sprite Fresh Commercial Design">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032325.jpg" alt="Shoona Aesthetic Character Poster">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032327.jpg" alt="Spider-Man Comic Manipulation">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032330.jpg" alt="Starbucks Creative Advertisement">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032332.jpg" alt="Hot & Crispy Samosa Flyer">
+            </div>
+            <div class="gallery-card">
+                <img src="1000032331.jpg" alt="Context Text Typography Design">
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="https://wa.me/917061116240?text=Hi, I checked your elite portfolio and want to hire you for editing!" target="_blank" class="whatsapp-btn" style="padding: 15px 35px; font-size: 1rem;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> ORDER YOUR CUSTOM EDIT</a>
         </div>
     </main>
 
