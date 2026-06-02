@@ -11,6 +11,34 @@
         html {
             scroll-behavior: smooth;
         }
+        /* नया प्रीमियम कोट कंटेनर - इमेज से बिल्कुल सुरक्षित और ऊपर */
+        .premium-quote-box {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 10;
+        }
+        .premium-quote-box h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 3px;
+            color: #ffffff;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            text-transform: uppercase;
+            line-height: 1.3;
+        }
+        .premium-quote-box h2 span {
+            color: #ff3333;
+            text-shadow: 0 0 20px rgba(255, 51, 51, 0.6);
+        }
+        /* मोबाइल रिस्पॉन्सिवनेस ताकि छोटे स्क्रीन पर भी सही दिखे */
+        @media (max-width: 768px) {
+            .premium-quote-box h2 {
+                font-size: 1.4rem;
+                letter-spacing: 1.5px;
+                padding: 0 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -40,7 +68,11 @@
             <span>FAST DELIVERY</span>
         </div>
 
-        <div class="main-visual">
+        <div class="premium-quote-box">
+            <h2>We don’t edit videos… <span>we create feelings people remember.</span></h2>
+        </div>
+
+        <div class="main-visual" style="margin-top: 10px;">
             <h1 class="bg-title">CREATIVE</h1>
             <img src="Picsart_26-05-30_20-10-36-364.png" alt="SATRIXFX Visual" class="character-img">
             <span class="year-badge">[2026]</span>
@@ -68,7 +100,7 @@
         <div class="service-card">
             <h2 class="service-title">VIDEO EDITING</h2>
             <p class="service-desc">Cinematic transitions, sound design, engaging text/effects, and high-retention editing.</p>
-            <div class="price-tag"><span class="old-price">₹149</span> ₹49<span class="per-service"> / Starting</span></div>
+            <div class="price-tag"><span class="old-price">₹499</span> ₹149<span class="per-service"> / Starting</span></div>
             <a href="video.html" class="whatsapp-btn">View Plans & Pricing</a>
         </div>
 
