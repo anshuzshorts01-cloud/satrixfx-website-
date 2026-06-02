@@ -25,49 +25,6 @@
         .section-title span {
             color: #ff3333;
         }
-        
-        /* वीडियो ग्रिड स्टाइल */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            padding: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .portfolio-card {
-            background: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-        .portfolio-card:hover {
-            border-color: #ff3333;
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(255, 51, 51, 0.2);
-        }
-        .video-container video {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: cover;
-            display: block;
-        }
-        .portfolio-info {
-            padding: 15px;
-            border-top: 1px solid #111;
-        }
-        .portfolio-info h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 1.4rem;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        .portfolio-info p {
-            font-size: 0.85rem;
-            color: #888;
-        }
 
         /* इमेज गैलरी ग्रिड स्टाइल */
         .gallery-grid {
@@ -94,6 +51,113 @@
             width: 100%;
             height: auto;
             display: block;
+        }
+
+        /* न्यू इंफोग्राफिक सेक्शन स्टाइल */
+        .about-editing {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 30px;
+            background: #050505;
+            border: 1px dashed #222;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .about-editing h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.8rem;
+            color: #ff3333;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .about-editing p {
+            font-size: 0.95rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* इंस्टाग्राम बॉक्स */
+        .instagram-redirect-box {
+            background: linear-gradient(135deg, #111 0%, #050505 100%);
+            border: 2px solid #ff3333;
+            border-radius: 12px;
+            padding: 40px 20px;
+            max-width: 700px;
+            margin: 50px auto;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(255, 51, 51, 0.1);
+        }
+        .instagram-redirect-box h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .instagram-redirect-box p {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+        }
+        .insta-btn {
+            display: inline-block;
+            background: #ff3333;
+            color: #fff;
+            padding: 14px 30px;
+            font-weight: 600;
+            font-size: 1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 51, 51, 0.4);
+        }
+        .insta-btn:hover {
+            background: #fff;
+            color: #000;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+
+        /* कोट्स सेक्शन स्टाइल */
+        .quotes-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        .quote-card {
+            background: #070707;
+            border: 1px solid #151515;
+            padding: 25px;
+            border-radius: 8px;
+            position: relative;
+            transition: border-color 0.3s ease;
+        }
+        .quote-card:hover {
+            border-color: #ff3333;
+        }
+        .quote-card i.quote-icon {
+            color: #ff3333;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .quote-text {
+            font-style: italic;
+            font-size: 0.95rem;
+            color: #ddd;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        .quote-author {
+            font-size: 0.8rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
         }
     </style>
 </head>
@@ -124,87 +188,11 @@
             <div class="brand-badge">OUR CREATIONS</div>
             <h1 style="font-family: 'Bebas Neue', sans-serif; font-size: 3.5rem; letter-spacing: 2px;">WORK PORTFOLIO</h1>
             <p style="color: #888; max-width: 600px; margin: 15px auto 0 auto; font-size: 0.95rem;">
-                We don’t just edit — we craft memorable high-retention experiences and premium visual artworks.
+                We don’t just edit — we craft memorable premium visual artworks and graphics that stand out.
             </p>
         </div>
 
         <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 20px auto; max-width: 60%;" />
-
-        <h2 class="section-title">FEATURED <span>VIDEO EDITS</span></h2>
-        
-        <div class="portfolio-grid">
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032303.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>CREATIVE REEL EDIT</h3><p>Advanced pacing, dynamic pop-ups, and audio integration.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032294.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>BIRTHDAY CONCEPT FX</h3><p>Custom frames, grid animations, and beat matching.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032295.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>CINEMATIC TEXT EFFECTS</h3><p>Typography synchronization and smooth overlays.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032298.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>PREMIUM GLOW & TRANSITION</h3><p>Aesthetic color grading and fluid character movement.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032300.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>INSTAGRAM UI MANIPULATION</h3><p>Viral hook designs and trendy UI mockups animation.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032302.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>MAGAZINE OVERLAY EDIT</h3><p>Creative frame borders and newspaper slide transition.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032305.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>SHAPE MASK GRAPHICS</h3><p>Geometric custom masks and fast typography flow.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032304.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>WAVE SEPARATOR CONCEPT</h3><p>Vector wave background and smooth presentation.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032307.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>CHRONO FILMSTRIP EDIT</h3><p>Retro filter design and dynamic geometric spin.</p></div>
-            </div>
-
-            <div class="portfolio-card">
-                <div class="video-container">
-                    <video controls preload="metadata"><source src="1000032308.mp4" type="video/mp4"></video>
-                </div>
-                <div class="portfolio-info"><h3>DYNAMIC VISUAL EFFECTS</h3><p>High-energy visual pacing and custom motion overlays.</p></div>
-            </div>
-        </div>
-
-        <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #ff3333, transparent); margin: 50px auto; max-width: 60%;" />
 
         <h2 class="section-title">PREMIUM <span>GRAPHIC DESIGNS</span></h2>
 
@@ -241,8 +229,44 @@
             </div>
         </div>
 
-        <div style="text-align: center; margin-top: 60px;">
-            <a href="https://wa.me/917061116240?text=Hi, I checked your elite portfolio and want to hire you for editing!" target="_blank" class="whatsapp-btn" style="padding: 15px 35px; font-size: 1rem;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> ORDER YOUR CUSTOM EDIT</a>
+        <div class="about-editing">
+            <h3>THE ART OF VISUAL STORYTELLING</h3>
+            <p>
+                Every design is a combination of strategic layout, flawless color grading, and high-retention hooks. From premium thumbnails to viral social media assets, we specialize in building powerful visual identities that capture attention within the first split second.
+            </p>
+        </div>
+
+        <div class="instagram-redirect-box">
+            <h3>WANT TO SEE OUR VIDEO EDITS?</h3>
+            <p>We craft high-energy reels, cinematic typography, and premium FX. For further premium video edits, check out our exclusive work directly on our Instagram highlights!</p>
+            <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE4MDk2MTUyMDU0NTg0MTQ2?story_media_id=3910479641811251797_24043495424&igsh=MTg2NnloOG1pODlrMA==" target="_blank" class="insta-btn">
+                <i class="fa-brands fa-instagram" style="margin-right: 8px;"></i> VISIT MY INSTAGRAM
+            </a>
+        </div>
+
+        <hr style="border: 0; height: 1px; background: linear-gradient(to right, transparent, #222, transparent); margin: 40px auto; max-width: 50%;" />
+
+        <h2 class="section-title">WORDS OF <span>INSPIRATION</span></h2>
+        <div class="quotes-container">
+            <div class="quote-card">
+                <i class="fa-solid fa-quote-left quote-icon"></i>
+                <p class="quote-text">"Creativity is piercing the mundane to find the marvelous."</p>
+                <p class="quote-author">— Bill Moyers</p>
+            </div>
+            <div class="quote-card">
+                <i class="fa-solid fa-wand-magic-sparkles quote-icon"></i>
+                <p class="quote-text">"Design is not just what it looks like and feels like. Design is how it works."</p>
+                <p class="quote-author">— Steve Jobs</p>
+            </div>
+            <div class="quote-card">
+                <i class="fa-solid fa-palette quote-icon"></i>
+                <p class="quote-text">"An image is not a status report of reality. It is an invention."</p>
+                <p class="quote-author">— Jerry Uelsmann</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://wa.me/917061116240?text=Hi, I checked your elite portfolio and want to hire you for your premium editing services!" target="_blank" class="whatsapp-btn" style="padding: 15px 35px; font-size: 1rem;"><i class="fa-brands fa-whatsapp" style="margin-right: 8px;"></i> ORDER YOUR CUSTOM WORK</a>
         </div>
     </main>
 
