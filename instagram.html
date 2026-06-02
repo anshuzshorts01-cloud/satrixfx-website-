@@ -1,166 +1,53 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Editing Plans | Satrixfx</title>
-    <style>
-        :root {
-            --bg-dark: #0b0f0c;
-            --card-bg: rgba(20, 28, 23, 0.6);
-            --neon-green: #00ff66;
-            --text-main: #ffffff;
-            --text-muted: #a3b8a8;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--bg-dark);
-            color: var(--text-main);
-            font-family: 'Segoe UI', sans-serif;
-            background-image: radial-gradient(circle at 50% -20%, rgba(0, 255, 102, 0.1), transparent 40%);
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 20px 40px;
-            background: rgba(11, 15, 12, 0.7);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 255, 102, 0.1);
-        }
-
-        .back-btn {
-            background: transparent;
-            color: var(--text-main);
-            border: 1px solid rgba(255,255,255,0.2);
-            padding: 8px 16px;
-            border-radius: 30px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            border-color: var(--neon-green);
-            color: var(--neon-green);
-            box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
-        }
-
-        .title-container {
-            text-align: center;
-            padding: 60px 20px 30px 20px;
-        }
-
-        .title-container h1 { font-size: 2.5rem; }
-        .title-container span { color: var(--neon-green); }
-
-        .plans-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .price-card {
-            background: var(--card-bg);
-            border: 1px solid rgba(0, 255, 102, 0.05);
-            border-radius: 16px;
-            padding: 35px 25px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .price-card:hover {
-            border-color: var(--neon-green);
-            transform: translateY(-5px);
-        }
-
-        .price-card h3 {
-            font-size: 1.4rem;
-            margin-top: 0;
-        }
-
-        .price-card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.5;
-            min-height: 60px;
-        }
-
-        .price-box {
-            margin: 25px 0;
-        }
-
-        .current-price {
-            font-size: 2rem;
-            color: var(--neon-green);
-            font-weight: bold;
-        }
-
-        .order-btn {
-            display: block;
-            background: var(--neon-green);
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 12px;
-            border-radius: 30px;
-            transition: 0.3s;
-        }
-
-        .order-btn:hover {
-            box-shadow: 0 0 20px var(--neon-green);
-            transform: scale(1.02);
-        }
-    </style>
+    <title>Instagram Services - SATRIXFX</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <a href="#" class="back-btn" onclick="history.back(); return false;">← Back</a>
-        <div style="font-weight: bold; font-size: 1.2rem;">Satrix<span>fx</span></div>
-    </header>
+    <header class="navbar">
+        <a href="index.html" style="color: #ffffff; text-decoration: none; font-weight: 600; font-size: 0.9rem; letter-spacing: 1px; display: flex; align-items: center; gap: 5px;">← BACK</a>
+        <div class="logo"><a href="index.html" style="color:inherit; text-decoration:none;">SATRIX<span>★</span>FX</a></div>
+        <div style="width: 50px;"></div> </header>
 
-    <div class="title-container">
-        <h1>Instagram Curation <span>Plans</span></h1>
-    </div>
+    <main class="hero-container">
+        <div class="main-visual">
+            <h1 class="bg-title">GROWTH</h1>
+            <img src="1000031809.png" alt="Shisui" class="character-img">
+        </div>
+    </main>
 
-    <section class="plans-container">
-        <div class="grid">
-            <div class="price-card">
-                <h3>Aesthetic Grid</h3>
-                <p>9-Grid puzzle layout design, custom branding accents, and clean placeholder management.</p>
-                <div class="price-box">
-                    <span class="current-price">Discuss Price</span>
-                </div>
-                <a href="https://wa.me/918292419409?text=I%20want%20to%20order%20Aesthetic%20Grid%20Instagram%20Plan" class="order-btn">Order Plan</a>
-            </div>
+    <section class="services-container">
+        <div class="service-card">
+            <h2 class="service-title">INCREASE FOLLOWERS</h2>
+            <p class="service-desc">Get high-quality, authentic followers to boost your profile presence.</p>
+            <div class="price-tag"><span class="old-price">₹49</span> ₹15<span class="per-service"> / Per 100</span></div>
+            <a href="https://wa.me/917061116240?text=Hi, I want to order Increase Followers service (₹15 per 100)" target="_blank" class="whatsapp-btn">ORDER NOW</a>
+        </div>
 
-            <div class="price-card">
-                <h3>Carousel Strategy</h3>
-                <p>High-retention continuous sliding posts with powerful headlines to maximize saves and shares.</p>
-                <div class="price-box">
-                    <span class="current-price">Discuss Price</span>
-                </div>
-                <a href="https://wa.me/918292419409?text=I%20want%20to%20order%20Carousel%20Strategy%20Instagram%20Plan" class="order-btn">Order Plan</a>
-            </div>
+        <div class="service-card">
+            <h2 class="service-title">INCREASE LIKES</h2>
+            <p class="service-desc">Boost your posts engagement and push your content to the explore page.</p>
+            <div class="price-tag"><span class="old-price">₹59</span> ₹20<span class="per-service"> / Per 100</span></div>
+            <a href="https://wa.me/917061116240?text=Hi, I want to order Increase Likes service (₹20 per 100)" target="_blank" class="whatsapp-btn">ORDER NOW</a>
+        </div>
 
-            <div class="price-card">
-                <h3>Full Feed Scale</h3>
-                <p>Complete visual branding management, personalized highlights covers, and dynamic template kits.</p>
-                <div class="price-box">
-                    <span class="current-price">Discuss Price</span>
-                </div>
-                <a href="https://wa.me/918292419409?text=I%20want%20to%20order%20Full%20Feed%20Scale%20Instagram%20Plan" class="order-btn">Order Plan</a>
-            </div>
+        <div class="service-card">
+            <h2 class="service-title">INCREASE COMMENTS</h2>
+            <p class="service-desc">Get custom, relevant comments to start real discussions on your posts.</p>
+            <div class="price-tag"><span class="old-price">₹39</span> ₹13<span class="per-service"> / Per 100</span></div>
+            <a href="https://wa.me/917061116240?text=Hi, I want to order Increase Comments service (₹13 per 100)" target="_blank" class="whatsapp-btn">ORDER NOW</a>
+        </div>
+
+        <div class="service-card">
+            <h2 class="service-title">REPOST + SAVE</h2>
+            <p class="service-desc">Maximize your algorithm reach with high-volume shares and saves.</p>
+            <div class="price-tag"><span class="old-price">₹89</span> ₹30<span class="per-service"> / Per 100</span></div>
+            <a href="https://wa.me/917061116240?text=Hi, I want to order Increase Repost + Save service (₹30 per 100)" target="_blank" class="whatsapp-btn">ORDER NOW</a>
         </div>
     </section>
 
